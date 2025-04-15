@@ -5,9 +5,9 @@ Este proyecto es una landing page *One Page* responsive para la iniciativa **"Ad
 ## 🧩 Estructura del sitio
 
 - **Encabezado** con logotipo SVG animado y navegación.
-- **Presentación** con mensaje central y botón de llamada a la acción.
+- **Presentación** con mensaje central y botón de llamada a la acción.a
 - **Galería de mascotas** con ilustraciones SVG personalizadas de un gato y un perro.
-- **Sección CTA** con botón animado.
+- **Sección de acción** con botón animado para poder adoptar.
 - **Footer** con créditos.
 
 ## 🖼️ SVG y Animaciones
@@ -16,10 +16,11 @@ Este proyecto es una landing page *One Page* responsive para la iniciativa **"Ad
 - Las ilustraciones fueron creadas en Figma y optimizadas para web.
 - El gato tiene una animación de orejas mediante `@keyframes`.
 - El perro utiliza `stroke-dasharray` y `stroke-dashoffset` para simular un trazo progresivo.
+- El perro tiene sensación de estar respirando usando `transform: scaleY()` aplicada con `@keyframes`
 - Animaciones adicionales incluyen:
   - Entrada suave de elementos.
   - Transiciones al pasar el cursor sobre enlaces y botones.
-  - Animación del logo al cargar la página.
+  - Animación del logo al cargar la página apareciendo por el lado izquierdo.
 
 ## 🎨 Diseño
 
@@ -33,4 +34,3 @@ Este proyecto es una landing page *One Page* responsive para la iniciativa **"Ad
 - `styles.css`
 - `/assets` → contiene los SVG originales exportados desde Figma.
 - `README.md` (este archivo)
-- `documentacion.pdf` → documentación completa del proyecto, estructura del código y capturas en diferentes dispositivos.

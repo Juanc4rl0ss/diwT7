@@ -1,266 +1,288 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+/* Reset de márgenes y altura total del viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del body: estructura en columna, fuente, fondo y color de texto */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff3f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Contenedor central para limitar ancho y centrar contenido */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Cabecera principal con fondo rosado claro y borde decorativo */
+.encabezado {
+  background-color: #ffe3ea;
+  border-bottom: 2px solid #ff6b81;
+}
+
+/* Flex container del encabezado: organiza logo y menú en columna */
+.encabezado-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Contenedor del logo con animación de entrada desde la izquierda */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateX(-350px);
+  animation: apareceLogo 4s ease forwards;
+}
+
+/* Animación de aparición suave del logo */
+@keyframes apareceLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff3f4;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .encabezado {
-    background-color: #ffe3ea;
-    border-bottom: 2px solid #ff6b81;
-  }
-  
-  .encabezado-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+}
+
+
+/* Estilo del texto dentro del logo */
+.texto-logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #d63c61;
+}
+
+/* Lista de navegación en columna (en mobile) */
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Enlaces del menú en rosa por coherencia visual con el diseño*/
+.menu a {
+  text-decoration: none;
+  color:#d63c61;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse por los enlaces del menú */
+.menu a:hover {
+  color:#ff6b81
+}
+
+/* Contenido principal que se expande ocupando el espacio disponible */
+.principal {
+  flex: 1;
+}
+
+/* Sección de presentación con texto centrado y fondo blanco */
+.presentacion {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+/* Títulos de la presentación */
+h2 {
+  color: #d63c61;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Párrafos en la sección de presentación */
+.presentacion p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Botón verde de llamada a la acción con efecto hover */
+.btn-cta {
+  background-color: #a4d6a7;
+  color: #1c3b1a;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón CTA */
+.btn-cta:hover {
+  background-color: #89c891;
+  transform: scale(1.05);
+}
+
+/* Sección de galería con fondo rosado */
+.galeria {
+  padding: 2rem 1rem;
+  background-color: #ffe3ea;
+  text-align: center;
+}
+
+/* Contenedor de las tarjetas de mascotas */
+.contenedor-mascotas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Tarjeta individual reutilizable para cada mascota (gato o perro), con animación  */
+.mascota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: entrada 1s ease forwards;
+}
+
+/* Nombre o información de cada mascota */
+.mascota p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #d63c61;
+}
+
+/* Sección con llamado a adoptar */
+.cta {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+/* Botón rosado para adoptar, con efecto hover */
+.btn-adoptar {
+  background-color: #d63c61;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón de adopción */
+.btn-adoptar:hover {
+  background-color: #b8304c;
+  transform: scale(1.05);
+}
+
+/* Pie de página con estilo suave y texto centrado */
+.footer {
+  background-color: #ffe3ea;
+  color: #5c5c5c;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #ff6b81;
+}
+
+/* Párrafos dentro del footer */
+.footer p {
+  margin: 0.3rem 0;
+}
+
+/* Animación para elementos que aparecen desde abajo con suavidad */
+@keyframes entrada {
+  from {
     opacity: 0;
-    transform: translateX(-350px);
-    animation : apareceLogo 4s ease forwards;
-
+    transform: translateY(40px);
   }
 
-  @keyframes apareceLogo {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .icono-logo {
-    animation: girar 6s linear infinite;
+}
+
+/* Estilos responsive a partir de 768px */
+@media (min-width: 768px) {
+  /* Cambia la estructura del encabezado a fila */
+  .encabezado-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  .texto-logo {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #d63c61;
-  }
-  
+
+  /* El menú pasa a ser horizontal */
   .menu ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 1rem;
   }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .menu a:hover {
-    color: #d63c61;
-  }
-  
-  .principal {
-    flex: 1;
-  }
-  
 
-  .presentacion {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #fff;
-  }
-  
-  h2 {
-    color: #d63c61;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-  
-  .presentacion p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 0 1rem;
-  }
-  
-  .btn-cta {
-    background-color: #a4d6a7;
-    color: #1c3b1a;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-cta:hover {
-    background-color: #89c891;
-    transform: scale(1.05);
-  }
-  
-  .galeria {
-    padding: 2rem 1rem;
-    background-color: #ffe3ea;
-    text-align: center;
-  }
-  
+  /* Galería de mascotas se adapta en fila */
   .contenedor-mascotas {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
   }
-  
-  .mascota {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: entrada 1s ease forwards;
-  }
-  
-  .mascota p {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: #d63c61;
-  }
-  
-  .cta {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #fff;
-  }
+}
 
-  .btn-adoptar {
-    background-color: #d63c61;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn-adoptar:hover {
-    background-color: #b8304c;
-    transform: scale(1.05);
-  }
-
-  
-  .menu a {
-    color: #D63C61;
-  }
-
-  .menu a:hover {
-    color: #b8304c;
-  }
-
-  
-    .footer {
-    background-color: #ffe3ea;
-    color: #5c5c5c;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-    border-top: 2px solid #ff6b81;
-  }
-  
-  .footer p {
-    margin: 0.3rem 0;
-  }
-  
-  @keyframes entrada {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes girar {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .encabezado-flex {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .menu ul {
-      flex-direction: row;
-      gap: 1rem;      
-    }
-  
-    .contenedor-mascotas {
-      flex-direction: row;
-      justify-content: center;
-    }
-  }
-  #oreja-izquierda,
+/* Animación de las orejas del perro (ligero movimiento de vaivén) */
+#oreja-izquierda,
 #oreja-derecha {
   transform-box: fill-box;
   transform-origin: bottom center;
   animation: orejas 0.5s ease-in-out infinite alternate;
 }
 
+/* Movimiento leve de rotación en las orejas */
 @keyframes orejas {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(10deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
 }
 
+/* El perro 'respira' con una ligera escala vertical */
 .perro-dibujado {
   animation: respirar 1.5s ease-in-out infinite;
   transform-origin: center;
 }
 
+/* Efecto de dibujo progresivo mediante stroke-dasharray y stroke-dashoffset */
 .perro-dibujado path {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  animation: trazo .5s ease forwards;
+  animation: trazo 5s ease forwards;
 }
 
+/* Animación de respiración con leve expansión vertical */
 @keyframes respirar {
-  0%, 100% {
+  0%,
+  100% {
     transform: scaleY(1);
   }
+
   50% {
     transform: scaleY(1.03);
   }
 }
 
+/* Animación de trazo que revela el contorno del SVG */
 @keyframes trazo {
   to {
     stroke-dashoffset: 0;
