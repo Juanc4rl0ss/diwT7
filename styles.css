@@ -57,7 +57,7 @@ html, body {
   
   .texto-logo {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #d63c61;
   }
   
@@ -91,7 +91,7 @@ html, body {
     background-color: #fff;
   }
   
-  .presentacion h2 {
+  h2 {
     color: #d63c61;
     font-size: 1.6rem;
     margin-bottom: 1rem;
@@ -143,6 +143,7 @@ html, body {
   .mascota p {
     margin-top: 0.5rem;
     font-weight: bold;
+    color: #d63c61;
   }
   
   .cta {
@@ -167,6 +168,16 @@ html, body {
     background-color: #b8304c;
     transform: scale(1.05);
   }
+
+  
+  .menu a {
+    color: #D63C61;
+  }
+
+  .menu a:hover {
+    color: #b8304c;
+  }
+
   
     .footer {
     background-color: #ffe3ea;
@@ -210,7 +221,7 @@ html, body {
   
     .menu ul {
       flex-direction: row;
-      gap: 1rem;
+      gap: 1rem;      
     }
   
     .contenedor-mascotas {
@@ -229,10 +240,25 @@ html, body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(10deg); }
 }
+
+.perro-dibujado {
+  animation: respirar 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
 .perro-dibujado path {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  animation: trazo 2.5s ease forwards;
+  animation: trazo .5s ease forwards;
+}
+
+@keyframes respirar {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.03);
+  }
 }
 
 @keyframes trazo {
