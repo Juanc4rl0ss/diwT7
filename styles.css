@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #c2185b;
   opacity: 0;
   transform: translateX(-350px);
   animation: apareceLogo 4s ease forwards;
@@ -61,17 +62,21 @@ body {
 /* Estilo del texto dentro del logo */
 .texto-logo {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-family: 'Pacifico', cursive;
   color: #d63c61;
 }
+.menu {
+  padding-right: 20px;
+  font-size: 0.9rem;
 
+}
 /* Lista de navegación en columna (en mobile) */
 .menu ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
 }
 
 /* Enlaces del menú en rosa por coherencia visual con el diseño*/
@@ -225,10 +230,15 @@ h2 {
     align-items: center;
   }
 
+
   /* El menú pasa a ser horizontal */
   .menu ul {
     flex-direction: row;
     gap: 1rem;
+  }
+
+  .logo {
+    padding-left: 15px;
   }
 
   /* Galería de mascotas se adapta en fila */
@@ -236,6 +246,8 @@ h2 {
     flex-direction: row;
     justify-content: center;
   }
+  
+ 
 }
 
 /* Animación de las orejas del perro (ligero movimiento de vaivén) */
