@@ -300,3 +300,29 @@ h2 {
     stroke-dashoffset: 0;
   }
 }
+
+/* Los ojos del conejo por defecto están cerrados */
+#eye-open-left,
+#eye-open-right {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Los ojos cerrados del conejo son visibles por defecto */
+#eye-closed-left,
+#eye-closed-right {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+/* Al pasar el mouse sobre la mascota, los ojos abiertos son visibles y los cerrados se ocultan */
+.mascota:hover #eye-open-left,
+.mascota:hover #eye-open-right {
+  opacity: 1;
+}
+
+/* Al pasar el mouse sobre la mascota, los ojos cerrados se ocultan */
+.mascota:hover #eye-closed-left,
+.mascota:hover #eye-closed-right {
+  opacity: 0;
+}
