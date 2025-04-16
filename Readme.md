@@ -17,6 +17,8 @@ Este proyecto es una landing page *One Page* responsive para la iniciativa **"Ad
 - El gato tiene una animación de orejas mediante `@keyframes`.
 - El perro utiliza `stroke-dasharray` y `stroke-dashoffset` para simular un trazo progresivo.
 - El perro tiene sensación de estar respirando usando `transform: scaleY()` aplicada con `@keyframes`
+- El conejo permanece con los ojos cerrados por defecto y, al pasar el cursor por encima, abre los ojos
+  mediante una transición suave usando `opacity` sobre elementos SVG individuales.
 - Animaciones adicionales incluyen:
   - Entrada suave de elementos.
   - Transiciones al pasar el cursor sobre enlaces y botones.
